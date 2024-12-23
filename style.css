@@ -1,0 +1,1333 @@
+/* Fuente global */
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Blanco suave */
+  color: #003366; /* Azul UAS */
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Encabezado */
+header.bannertitulo {
+  width: 100vw; /* Hace que el encabezado ocupe todo el ancho de la pantalla */
+  height: 150px; /* Ajusta la altura del encabezado según tu necesidad */
+  display: flex; /* Activa Flexbox */
+  justify-content: space-between; /* Distribuye el contenido a los extremos */
+  align-items: center; /* Centra verticalmente los elementos */
+  padding: 0; /* Elimina el relleno */
+  margin: 0; /* Elimina los márgenes */
+  background: linear-gradient(to right, #1d71b8, #003595); /* Azul UAS a un azul más claro */
+  color: #ffffff;
+}
+
+/* Contenedor para los elementos del header */
+header .container {
+  display: flex; /* Activa Flexbox */
+  justify-content: space-between; /* Espacia el contenido a los extremos */
+  align-items: center; /* Centra verticalmente los elementos */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 0; /* Elimina el relleno alrededor del contenedor */
+  margin: 0; /* Elimina los márgenes */
+}
+
+/* Imagen de la UAS alineada a la izquierda */
+header .imgUAS {
+  height: 190px; /* Incrementa la altura para hacerla más grande verticalmente */
+  width: auto; /* Asegura que el ancho se ajuste automáticamente para mantener las proporciones */
+  margin-left: 0; /* Elimina el margen izquierdo */
+  margin-right: 0; /* Elimina el margen derecho */
+  flex-shrink: 0; /* Evita que se reduzca el tamaño de la imagen */
+}
+
+
+/* Contenedor central (título y texto) */
+header .center-content {
+  display: flex;
+  flex-direction: column; /* Elementos en columna */
+  align-items: flex-start; /* Alinea los elementos al inicio (izquierda) */
+  text-align: left; /* Alinea el texto hacia la izquierda */
+  flex-grow: 1; /* Hace que el contenido central ocupe el espacio restante */
+}
+
+/* Título principal */
+header .center-content .titulo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff; /*titutlo en blanco*/
+  text-transform: uppercase;
+}
+
+/* Subtítulo */
+header .center-content .subtitulo {
+  font-size: 20px;
+  font-weight: normal;
+  color: #ffffff; /* Blanco */
+}
+
+/* Logos en la parte derecha */
+header .logos-right {
+  display: flex; /* Activa Flexbox */
+  gap: 0; /* Elimina el espacio entre los logos */
+  align-items: center; /* Alinea verticalmente las imágenes */
+}
+
+/* Logos */
+header .imgFacultad,header .imgVision {
+  height: 120px; /* Tamaño uniforme para los logos */
+  margin-left: 0; /* Elimina el margen izquierdo */
+  padding-left: 0; /* Elimina el padding a la izquierda */
+}
+
+/* Bordes redondeados para las imágenes */
+header img {
+  border-radius: 10px;
+}
+
+/* Evitar cualquier espacio extra alrededor del body */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Contenedor de la barra azul */
+.containersubtitulo {
+  width: 100% !important; /* Asegurar que ocupe todo el ancho */
+  background: linear-gradient(to right, #003595, #1d71b8) !important; /* Fondo azul degradado */
+  display: flex !important; /* Activar flexbox */
+  justify-content: center !important; /* Centrar texto horizontalmente */
+  align-items: center !important; /* Centrar texto verticalmente */
+  padding: 10px 0 !important; /* Espaciado interno */
+  margin: 0 !important; /* Sin márgenes */
+}
+
+.universidad-subtitulo {
+  font-size: 18px !important; /* Tamaño de fuente */
+  letter-spacing: 20px !important; /* Separación aumentada entre letras */
+  color: white !important; /* Texto blanco */
+  text-transform: uppercase !important; /* Texto en mayúsculas */
+  margin: 0 !important; /* Sin márgenes adicionales */
+  text-align: center; /* Asegurar el centrado horizontal */
+}
+
+
+
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column; /* Elementos apilados verticalmente */
+    text-align: center;
+  }
+
+  header .titulo {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  header .imgUAS,
+  header .imgFacultad,
+  header .imgVision {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header .titulo {
+    font-size: 18px;
+  }
+
+  header img {
+    width: 80%;
+    max-width: 150px;
+  }
+}
+
+
+
+
+/* Contenedor de la barra azul */
+.containersubtitulo {
+  width: 100%; /* Asegurar que ocupe todo el ancho */
+  background: linear-gradient(to right, #003595, #1d71b8); /* Fondo azul degradado */
+  color: white; /* Texto en blanco */
+  display: flex; /* Activar flexbox */
+  justify-content: center; /* Centrar el texto horizontalmente */
+  align-items: center; /* Centrar el texto verticalmente */
+  padding: 10px 0; /* Espaciado interno */
+  margin: 0; /* Sin márgenes adicionales */
+}
+
+/* Estilo del texto */
+.universidad-subtitulo {
+  font-size: 18px; /* Tamaño de la fuente */
+  letter-spacing: 8px; /* Separación entre letras */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  margin: 0; /* Sin márgenes */
+}
+
+
+
+
+
+/* Contenedor del menú hamburguesa */
+#menuToggle {
+  position: absolute; /* Lo coloca en una posición específica */
+  top: 200px; /* 200px desde la parte superior de la página */
+  right: 10px; /* 10px desde la parte derecha de la página */
+  display: flex;
+  flex-direction: column; /* Cambia a disposición vertical */
+  justify-content: center; /* Alinea las barras en el centro verticalmente */
+  align-items: center; /* Alinea las barras horizontalmente */
+  background-color: #003366; /* Fondo azul */
+  padding: 10px; /* Espaciado alrededor */
+  border-radius: 5px; /* Bordes redondeados */
+  z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
+  cursor: pointer; /* Cambia el cursor para indicar que es un botón */
+  transition: transform 0.3s ease; /* Transición suave para transformaciones */
+}
+
+/* Barra de las barras del menú */
+.toggle {
+  display: flex;
+  flex-direction: column; /* Acomoda las barras de manera vertical */
+  align-items: center;
+  gap: 5px; /* Separación entre las barras */
+}
+
+/* Cada barra */
+.bar {
+  width: 30px; /* Ancho de las barras */
+  height: 5px; /* Altura de las barras */
+  background-color: white; /* Color blanco */
+  margin: 5px 0; /* Separación vertical entre las barras */
+  transition: all 0.3s ease; /* Efecto suave en la transición */
+}
+
+/* Estilo de la barra cuando se activa la animación para la X */
+#menuToggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px); /* Gira la barra superior */
+}
+
+#menuToggle.open .bar:nth-child(2) {
+  opacity: 0; /* Hace desaparecer la barra del medio */
+}
+
+#menuToggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px); /* Gira la barra inferior */
+}
+
+
+
+
+/* Estilos del menú */
+
+.menu {
+  margin: 0; /* Asegura que no haya margen superior */
+  padding: 0; /* Elimina el relleno superior */
+
+  background-color: #b89d2b; /* Fondo */
+  padding: 10px 0; /* Espaciado vertical */
+}
+
+.menu ul {
+  display: flex; /* Acomoda las opciones de manera horizontal */
+  justify-content: center; /* Centra las opciones en el espacio disponible */
+  list-style-type: none; /* Elimina los puntos de lista */
+  margin: 0; /* Elimina márgenes predeterminados */
+  padding: 0; /* Elimina el padding predeterminado */
+}
+
+.menu ul li {
+  padding: 10px 20px; /* Espaciado alrededor de cada opción */
+  color: white; /* Color blanco para el texto */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: normal; /* Letra normal, sin negrita */
+  text-align: center; /* Centra el texto */
+  cursor: pointer; /* Aparece un cursor de mano cuando se pasa el mouse */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para el hover */
+  font-family: 'Arial', sans-serif; /* Tipografía sencilla */
+  text-transform: uppercase; /* Convierte las letras a mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+.menu ul li:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto al pasar el ratón */
+  transform: scale(1.1); /* Efecto de agrandamiento en hover */
+}
+
+/* Barra entre cada opción */
+.menu ul li:not(:last-child) {
+  border-right: 2px solid white; /* Barra blanca entre las opciones */
+}
+
+
+
+
+/* Banner de la página */
+.banner {
+  width: 100%;
+  height:300px;
+  background-image: url("images/baner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: antiquewhite;
+}
+
+
+
+
+
+
+/* Estilo para el contenedor del video */
+.video-container {
+  display: flex; /* Utiliza flexbox para centrar el contenido */
+  justify-content: center; /* Centra el video horizontalmente */
+  align-items: center; /* Centra el video verticalmente */
+  height: 100%; /* Asegura que ocupe toda la altura disponible del contenedor */
+  padding: 40px; /* Aumenta el espacio alrededor del video */
+}
+
+/* Estilo para el iframe del video */
+iframe {
+  max-width: 80%; /* Reduce el ancho del video al 80% del contenedor */
+  height: 450px; /* Establece una altura fija para el video */
+  border: none; /* Elimina el borde por defecto del iframe */
+}
+
+
+
+
+
+
+
+/* Estilos generales para la sección de noticias */
+.Anuncios {
+  background-color: #f4f4f9; /* Color de fondo suave */
+  padding: 50px 0; /* Espaciado superior e inferior */
+  text-align: center; /* Centra el texto */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor de la sección */
+}
+
+.Anuncios .content-box {
+  background-color: #ffffff; /* Fondo blanco para el contenido */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  max-width: 900px; /* Limita el ancho máximo */
+  margin: 0 auto; /* Centra el contenido */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada para resaltar */
+}
+
+/* Estilo del título principal */
+.Anuncios h1 {
+  font-size: 36px; /* Tamaño grande para el título */
+  color: #003366; /* Color azul oscuro */
+  margin-bottom: 20px; /* Espaciado inferior */
+  font-family: 'Arial', sans-serif; /* Tipo de fuente moderna */
+}
+
+/* Estilo del subtítulo */
+.Anuncios h2 {
+  font-size: 24px; /* Tamaño moderado para el subtítulo */
+  color: #333333; /* Gris oscuro */
+  margin-bottom: 15px; /* Espaciado inferior */
+  font-family: 'Arial', sans-serif; /* Tipo de fuente moderna */
+}
+
+/* Estilo para la imagen */
+.Anuncios img {
+  width: 80%; /* Ajusta el tamaño de la imagen */
+  max-width: 600px; /* Limita el tamaño máximo de la imagen */
+  margin: 20px 0; /* Espaciado arriba y abajo de la imagen */
+  border-radius: 8px; /* Bordes redondeados para la imagen */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil alrededor de la imagen */
+}
+
+/* Estilo para el párrafo */
+.Anuncios p {
+  font-size: 16px; /* Tamaño moderado para el texto */
+  color: #555555; /* Gris claro para el texto */
+  line-height: 1.6; /* Aumenta la altura de línea para mayor legibilidad */
+  font-family: 'Arial', sans-serif; /* Fuente moderna */
+  margin-top: 20px; /* Espaciado superior */
+  text-align: justify; /* Alinea el texto justificado */
+  max-width: 800px; /* Limita el ancho del texto */
+  margin-left: auto; /* Centra el texto */
+  margin-right: auto; /* Centra el texto */
+}
+
+
+
+
+
+
+
+/* Estilos generales para la sección de noticias adicionales */
+.historial-noticias {
+  background-color: #f9f9f9; /* Fondo gris claro */
+  padding: 50px 20px; /* Espaciado en los lados y superior/inferior */
+  text-align: center; /* Centra el contenido */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor de la sección */
+}
+
+/* Título de la sección */
+.historial-noticias .titulo-central {
+  font-size: 32px; /* Tamaño grande para el título */
+  color: #003366; /* Color azul oscuro */
+  font-weight: bold; /* Negrita para mayor énfasis */
+  margin-bottom: 40px; /* Espaciado debajo del título */
+  font-family: 'Arial', sans-serif; /* Fuente moderna */
+}
+
+/* Estilo para el contenedor de las noticias */
+.noticias {
+  display: grid; /* Usa un grid para organizar las noticias */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dos o más columnas según el tamaño de la pantalla */
+  gap: 20px; /* Espaciado entre las noticias */
+  justify-items: center; /* Centra cada noticia dentro de su celda */
+}
+
+/* Estilo para cada noticia */
+.noticia {
+  background-color: #ffffff; /* Fondo blanco para cada noticia */
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Evita que los bordes salgan del contenedor */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor de la noticia */
+  max-width: 350px; /* Limita el ancho máximo de cada noticia */
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Estilo para la imagen de cada noticia */
+.noticia img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-bottom: 15px; /* Espaciado debajo de la imagen */
+}
+
+/* Estilo para el texto dentro de cada noticia */
+.texto-noticia p {
+  color: #333333; /* Color gris oscuro para el texto */
+  font-size: 16px; /* Tamaño de fuente adecuado */
+  margin-bottom: 10px; /* Espaciado entre los párrafos */
+  line-height: 1.5; /* Aumenta la altura de la línea para mayor legibilidad */
+}
+
+/* Estilo para el enlace de "Más información" */
+.texto-noticia a {
+  color: #003366; /* Color azul oscuro para el enlace */
+  font-weight: bold; /* Negrita en el enlace */
+  text-decoration: none; /* Elimina el subrayado */
+  transition: color 0.3s ease; /* Transición suave de color */
+}
+
+.texto-noticia a:hover {
+  color: #ff6600; /* Cambia el color del enlace al pasar el ratón */
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilos para la sección de Redes Sociales */
+.redes-sociales {
+  background-color: #f9f9f9; /* Fondo gris claro */
+  padding: 50px 20px; /* Espaciado superior/inferior y en los lados */
+  text-align: center; /* Centra el contenido */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor de la sección */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-top: 30px; /* Espaciado superior para separación de otras secciones */
+}
+
+/* Título de la sección */
+.titulo-redes {
+  font-size: 32px; /* Tamaño grande para el título */
+  color: #003366; /* Color azul oscuro */
+  font-weight: bold; /* Negrita para mayor énfasis */
+  margin-bottom: 20px; /* Espaciado debajo del título */
+  font-family: 'Arial', sans-serif; /* Fuente moderna */
+}
+
+/* Descripción debajo del título */
+.descripcion-redes {
+  font-size: 18px; /* Tamaño de fuente moderado */
+  color: #666666; /* Color gris para el texto de descripción */
+  margin-bottom: 40px; /* Espaciado debajo de la descripción */
+}
+
+/* Contenedor para los íconos de las redes sociales */
+.redes {
+  display: flex; /* Utiliza flexbox para organizar los íconos */
+  justify-content: center; /* Centra los íconos horizontalmente */
+  gap: 20px; /* Espaciado entre los íconos */
+  margin-bottom: 40px; /* Espacio debajo de los íconos antes de las noticias */
+}
+
+/* Estilo para los enlaces de cada red social */
+.redes a {
+  display: inline-block; /* Los íconos se mantienen en línea */
+  width: 50px; /* Ancho fijo para los íconos */
+  height: 50px; /* Alto fijo para los íconos */
+  transition: transform 0.3s ease; /* Efecto de transición al pasar el ratón */
+}
+
+/* Estilo para los íconos de las redes sociales */
+.redes img {
+  width: 100%; /* Los íconos ocupan todo el contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 50%; /* Hace los íconos circulares */
+  object-fit: cover; /* Asegura que las imágenes se ajusten sin perder la proporción */
+}
+
+/* Efecto al pasar el ratón sobre los íconos */
+.redes a:hover {
+  transform: scale(1.1); /* Aumenta el tamaño ligeramente al pasar el ratón */
+}
+
+/* Modificaciones adicionales */
+.icono-red-social {
+  width: 50px; /* Tamaño del icono */
+  height: 50px; 
+  transition: transform 0.3s ease, filter 0.3s ease; /* Efecto de transición para escala y brillo */
+  border-radius: 50%; /* Hace los íconos redondos */
+  border: 2px solid transparent; /* Borde inicial transparente */
+}
+
+.icono-red-social:hover {
+  transform: scale(1.1); /* Aumenta el tamaño del icono cuando el usuario pasa el ratón */
+  filter: brightness(1.2); /* Aumenta el brillo del icono */
+  border-color: #4267B2; /* Color de borde azul (similar al color de Facebook) */
+}
+
+/* Estilos para la sección de noticias de Facebook */
+.area-noticias {
+  background-color: #ffffff; /* Fondo blanco para las noticias */
+  padding: 30px 20px; /* Espaciado interno para las noticias */
+  margin-top: 40px; /* Espacio superior para separar las noticias de los íconos */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para las noticias */
+}
+
+.area-noticias h3 {
+  font-size: 24px; /* Tamaño de fuente para el título de las noticias */
+  color: #003366; /* Color azul oscuro */
+  font-weight: bold; /* Título en negrita */
+  margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.contenedor-noticias {
+  display: flex; /* Flexbox para las publicaciones */
+  flex-direction: column; /* Alinea las publicaciones de manera vertical */
+  gap: 20px; /* Espacio entre cada publicación */
+}
+.publicacion {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.publicacion p {
+  font-size: 16px;
+  color: #333333;
+}
+
+
+
+
+
+/* Estilo para la sección de Contacto */
+.info-contacto {
+  background-color: #f4f4f4; /* Fondo gris claro */
+  padding: 30px 20px; /* Espaciado alrededor */
+  text-align: center; /* Centra el contenido */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-bottom: 20px; /* Espaciado inferior */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.info-container {
+  display: inline-block; /* Ajusta el contenido centrado */
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  max-width: 600px; /* Ancho máximo */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.info-container p {
+  margin: 10px 0; /* Espaciado entre párrafos */
+  color: #333333; /* Texto gris oscuro */
+  font-size: 18px; /* Tamaño de fuente moderado */
+}
+
+.info-container p strong {
+  font-weight: bold; /* Resalta los títulos */
+  color: #003366; /* Azul oscuro */
+}
+
+/* Estilo para el mapa */
+
+.mapa-container {
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  margin: 0 auto; /* Centra el contenedor */
+
+  width: 100%; /* Ajusta al ancho del contenedor */
+  height: 450px; /* Altura del mapa */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta contenido fuera del contenedor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Título de la sección Contacto */
+.mapa-contacto h2 {
+  font-size: 28px;
+  color: #003366;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .info-container {
+    width: 90%; /* Ocupa casi todo el ancho en pantallas pequeñas */
+  }
+  
+.mapa-container {
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  margin: 0 auto; /* Centra el contenedor */
+
+    height: 300px; /* Reduce altura del mapa en móviles */
+  }
+}
+
+
+
+
+/* pie de pagina */ 
+
+footer {
+  background-color: #f1ebd5;
+  color: rgba(117, 115, 115, 0.877);
+  text-align: center;
+  position: relative; /* Cambiar a relative */
+  height: auto; /* Ajustar la altura automáticamente */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Añadir espaciado */
+
+  background-color: #f1ebd5;
+  color: rgba(117, 115, 115, 0.877);
+  text-align: center;
+  
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer img {
+  height: 60px; /* Ajusta la altura de las imágenes a 60px */
+  
+}
+footer p {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVIDAD PARA DISPOSITIVOS MEDIANOS (TABLETAS, PANTALLAS MEDIANAS) */
+@media (max-width: 1024px) {
+  header.bannertitulo {
+    display: flex;
+    flex-direction: column; /* Apila los elementos del encabezado */
+    align-items: center; /* Centra los elementos horizontalmente */
+    height: auto; /* Ajusta la altura según el contenido */
+    padding: 15px; /* Espaciado adicional */
+  }
+
+  .container, .center-content {
+    padding: 0 15px; /* Ajusta los márgenes laterales */
+  }
+
+  .Anuncios img {
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de las imágenes */
+  }
+
+  .contenido-contacto {
+    display: flex;
+    flex-direction: column; /* Cambia a disposición vertical */
+    gap: 15px; /* Espaciado entre elementos */
+  }
+}
+
+/* RESPONSIVIDAD PARA DISPOSITIVOS PEQUEÑOS (TELÉFONOS) */
+@media (max-width: 768px) {
+  .menu ul {
+    display: flex;
+    flex-direction: column; /* Cambia el menú a disposición vertical */
+    align-items: center; /* Centra los elementos */
+    gap: 10px; /* Espaciado entre elementos */
+  }
+
+  .banner {
+    height: 300px; /* Reduce la altura del banner */
+    background-size: cover; /* Asegura que el fondo se ajuste al contenedor */
+    background-position: center; /* Centra el contenido del fondo */
+  }
+
+  
+.mapa-container {
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  margin: 0 auto; /* Centra el contenedor */
+
+    height: 180px; /* Ajusta la altura del mapa */
+  }
+
+  
+footer {
+  background-color: #f1ebd5;
+  color: rgba(117, 115, 115, 0.877);
+  text-align: center;
+  position: relative; /* Cambiar a relative */
+  height: auto; /* Ajustar la altura automáticamente */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Añadir espaciado */
+
+    display: flex;
+    flex-direction: column; /* Apila los elementos del pie de página */
+    align-items: center; /* Centra el contenido */
+    height: auto;
+    padding: 10px;
+    text-align: center; /* Alinea el texto en el centro */
+  }
+
+  footer p {
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+    line-height: 1.5; /* Mejora la legibilidad */
+  }
+}
+
+/* RESPONSIVIDAD PARA PANTALLAS MUY PEQUEÑAS (TELÉFONOS COMPACTOS) */
+@media (max-width: 480px) {
+  header .titulo {
+    font-size: 18px; /* Reduce el tamaño del título */
+    text-align: center; /* Centra el texto */
+  }
+
+  .redes img {
+    width: 35px; /* Reduce el tamaño de los íconos de redes sociales */
+    height: auto; /* Mantiene la proporción */
+  }
+
+  .noticia img {
+    width: 100%; /* Asegura que las imágenes no excedan el ancho */
+    height: auto; /* Mantiene la proporción */
+  }
+
+  iframe {
+    width: 100%; /* Ajusta el video para pantallas pequeñas */
+    height: 220px; /* Reduce la altura del video */
+  }
+
+  .container, .center-content {
+    padding: 0 10px; /* Reduce aún más los márgenes laterales */
+  }
+}
+
+/* Ajustes responsivos adicionales para pantallas muy pequeñas (teléfonos compactos) */
+@media (max-width: 576px) {
+  /* Ajuste del header */
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .imgUAS,
+  header .imgFacultad,
+  header .imgVision {
+    max-width: 80%;
+    height: auto;
+  }
+
+  /* Ajustar el subtítulo */
+  .universidad-subtitulo {
+    font-size: 16px;
+    letter-spacing: normal;
+  }
+
+  /* Ajustar el menú */
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Banner y video */
+  .banner {
+    height: 200px;
+  }
+
+  iframe {
+    height: 200px;
+  }
+
+  /* Ajustar noticias */
+  .noticia {
+    max-width: 100%;
+  }
+
+  .noticia img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Ajustar el footer */
+  
+footer {
+  background-color: #f1ebd5;
+  color: rgba(117, 115, 115, 0.877);
+  text-align: center;
+  position: relative; /* Cambiar a relative */
+  height: auto; /* Ajustar la altura automáticamente */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Añadir espaciado */
+
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+/* Responsividad para tabletas (entre 576px y 1024px) */
+@media (min-width: 576px) and (max-width: 1024px) {
+  /* Ajuste del header */
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  header .imgUAS,
+  header .imgFacultad,
+  header .imgVision {
+    height: auto;
+    max-height: 100px; /* Ajustar la altura de los logos */
+  }
+
+  .center-content .titulo {
+    font-size: 20px; /* Tamaño ajustado para tabletas */
+  }
+
+  /* Menú */
+  .menu ul {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  /* Banner */
+  .banner {
+    height: 250px; /* Altura ajustada para tabletas */
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Noticias */
+  .noticias {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+    gap: 15px;
+  }
+
+  .noticia {
+    max-width: 100%;
+  }
+
+  /* Redes sociales */
+  .redes img {
+    width: 40px; /* Ajustar tamaño de íconos */
+    height: auto;
+  }
+
+  /* Footer */
+  
+footer {
+  background-color: #f1ebd5;
+  color: rgba(117, 115, 115, 0.877);
+  text-align: center;
+  position: relative; /* Cambiar a relative */
+  height: auto; /* Ajustar la altura automáticamente */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Añadir espaciado */
+
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+}
+
+/* Ajustes específicos para el encabezado en pantallas pequeñas y medianas */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    text-align: center; /* Centra el contenido */
+    padding: 10px; /* Espaciado interno */
+  }
+
+  header .imgUAS {
+    max-width: 100px; /* Reduce el tamaño del logo izquierdo */
+    height: auto; /* Mantiene las proporciones */
+    margin-bottom: 10px; /* Añade espacio debajo del logo */
+  }
+
+  .center-content .titulo {
+    font-size: 18px; /* Reduce el tamaño del texto del título */
+    margin: 10px 0; /* Espaciado superior e inferior */
+  }
+
+  .center-content .subtitulo {
+    font-size: 14px; /* Reduce el tamaño del subtítulo */
+  }
+
+  header .logos-right {
+    flex-direction: column; /* Apila los logos de la derecha */
+    gap: 10px; /* Espaciado entre los logos */
+  }
+
+  header .logos-right img {
+    max-width: 80px; /* Ajusta el tamaño de los logos a la derecha */
+    height: auto; /* Mantiene proporciones */
+  }
+
+  /* Subtítulo debajo del encabezado */
+  
+.containersubtitulo {
+  background: linear-gradient(to right, #003595, #1d71b8); /* Azul UAS */
+  color: #ffffff; /* Color de texto */
+  text-align: center; /* Centrar el texto */
+  padding: 0; /* Sin relleno vertical */
+  margin: 0; /* Sin márgenes */
+  border: none; /* Eliminar cualquier borde */
+
+    font-size: 12px; /* Reduce el tamaño del texto */
+    letter-spacing: 2px; /* Ajusta el espaciado entre letras */
+    padding: 5px; /* Reduce el padding interno */
+  }
+}
+
+/* Ajustes específicos para el subtítulo en diferentes tamaños de pantalla */
+
+.containersubtitulo {
+  background: linear-gradient(to right, #003595, #1d71b8); /* Azul UAS */
+  color: #ffffff; /* Color de texto */
+  text-align: center; /* Centrar el texto */
+  padding: 0; /* Sin relleno vertical */
+  margin: 0; /* Sin márgenes */
+  border: none; /* Eliminar cualquier borde */
+
+  display: flex;
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  align-items: center; /* Centrar el contenido verticalmente */
+  padding: 10px 20px; /* Añadir espaciado para evitar recortes */
+  overflow: hidden; /* Asegurar que no haya desbordamiento */
+}
+
+.universidad-subtitulo {
+  font-size: 20px; /* Tamaño moderado para que sea legible */
+  text-align: center; /* Centrar el texto */
+  white-space: normal; /* Permitir que el texto ocupe varias líneas si es necesario */
+  letter-spacing: 5px; /* Reducir el espaciado entre letras */
+}
+
+/* Ajustes para tabletas (pantallas medianas) */
+@media (max-width: 1024px) {
+  
+.containersubtitulo {
+  background: linear-gradient(to right, #003595, #1d71b8); /* Azul UAS */
+  color: #ffffff; /* Color de texto */
+  text-align: center; /* Centrar el texto */
+  padding: 0; /* Sin relleno vertical */
+  margin: 0; /* Sin márgenes */
+  border: none; /* Eliminar cualquier borde */
+
+    padding: 10px; /* Reducir el padding */
+  }
+
+  .universidad-subtitulo {
+    font-size: 18px; /* Reducir el tamaño del texto */
+    letter-spacing: 3px; /* Ajustar el espaciado */
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  
+.containersubtitulo {
+  background: linear-gradient(to right, #003595, #1d71b8); /* Azul UAS */
+  color: #ffffff; /* Color de texto */
+  text-align: center; /* Centrar el texto */
+  padding: 0; /* Sin relleno vertical */
+  margin: 0; /* Sin márgenes */
+  border: none; /* Eliminar cualquier borde */
+
+    padding: 5px; /* Reducir aún más el padding */
+  }
+
+  .universidad-subtitulo {
+    font-size: 16px; /* Ajustar el tamaño del texto para móviles */
+    letter-spacing: 2px; /* Reducir aún más el espaciado */
+  }
+}
+
+/* Ajustes para el footer en pantallas pequeñas */
+@media (max-width: 576px) {
+  
+footer {
+  background-color: #f1ebd5;
+  color: rgba(117, 115, 115, 0.877);
+  text-align: center;
+  position: relative; /* Cambiar a relative */
+  height: auto; /* Ajustar la altura automáticamente */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Añadir espaciado */
+
+    position: relative; /* Eliminar posición fija */
+    height: auto; /* Ajustar la altura automáticamente */
+    padding: 20px; /* Añadir padding para mantener espacio */
+    text-align: center;
+  }
+
+  
+.mapa-container {
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  margin: 0 auto; /* Centra el contenedor */
+
+    margin-bottom: 20px; /* Añadir espacio debajo del mapa */
+  }
+}
+
+/* Ajustes para centrar el mapa y alinear las imágenes del footer en móviles */
+@media (max-width: 576px) {
+  
+.mapa-container {
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  margin: 0 auto; /* Centra el contenedor */
+
+    display: flex;
+    justify-content: center; /* Centrar el mapa horizontalmente */
+    align-items: center;
+    margin-bottom: 20px; /* Añadir espacio debajo */
+  }
+
+  
+footer {
+  background-color: #f1ebd5;
+  color: rgba(117, 115, 115, 0.877);
+  text-align: center;
+  position: relative; /* Cambiar a relative */
+  height: auto; /* Ajustar la altura automáticamente */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Añadir espaciado */
+
+    display: flex;
+    flex-direction: row; /* Alinear en una fila */
+    justify-content: space-around; /* Espaciar las imágenes uniformemente */
+    align-items: center;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  footer img {
+    max-width: 40%; /* Limitar el tamaño de las imágenes */
+    height: auto; /* Mantener proporción */
+  }
+}
+
+/* Ajustes del encabezado para tabletas */
+@media (min-width: 576px) and (max-width: 1024px) {
+  header .container {
+    flex-direction: row;
+    justify-content: space-between; /* Distribuir elementos uniformemente */
+    align-items: center; /* Alinear elementos verticalmente */
+    padding: 10px 20px; /* Añadir espaciado interno */
+  }
+
+  header .imgUAS {
+    max-width: 100px; /* Ajustar tamaño del logo izquierdo */
+    height: auto; /* Mantener proporciones */
+  }
+
+  .center-content {
+    flex-grow: 1; /* Expandir contenido central */
+    text-align: center; /* Centrar texto */
+    margin: 0 20px; /* Añadir margen lateral */
+  }
+
+  .center-content .titulo {
+    font-size: 22px; /* Reducir ligeramente el tamaño del título */
+    margin-bottom: 5px; /* Espaciado inferior */
+  }
+
+  .center-content .subtitulo {
+    font-size: 18px; /* Ajustar el tamaño del subtítulo */
+  }
+
+  header .logos-right {
+    display: flex;
+    gap: 10px; /* Espaciado entre logos */
+  }
+
+  header .logos-right img {
+    max-width: 100px; /* Ajustar tamaño de los logos derechos */
+    height: auto; /* Mantener proporciones */
+  }
+
+  
+.containersubtitulo {
+  background: linear-gradient(to right, #003595, #1d71b8); /* Azul UAS */
+  color: #ffffff; /* Color de texto */
+  text-align: center; /* Centrar el texto */
+  padding: 0; /* Sin relleno vertical */
+  margin: 0; /* Sin márgenes */
+  border: none; /* Eliminar cualquier borde */
+
+    font-size: 14px; /* Reducir tamaño del subtítulo */
+    letter-spacing: 2px; /* Ajustar espaciado entre letras */
+    padding: 5px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+  }
+}
+
+/* Corregir el espacio en blanco en el encabezado */
+@media (min-width: 576px) and (max-width: 1024px) {
+  header .container {
+    width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+    padding: 0; /* Eliminar padding adicional */
+    margin: 0; /* Eliminar márgenes adicionales */
+    box-sizing: border-box; /* Incluir padding en el ancho total */
+  }
+
+  header .logos-right {
+    display: flex;
+    justify-content: flex-end; /* Alinear los logos a la derecha */
+    gap: 10px; /* Espaciado entre logos */
+  }
+
+  header .logos-right img {
+    max-width: 90px; /* Reducir el tamaño máximo para evitar desbordamientos */
+    height: auto; /* Mantener proporciones */
+  }
+
+  .center-content {
+    text-align: center; /* Centrar texto */
+    margin: 0 auto; /* Centrar contenido */
+  }
+}
+
+/* Ajustes para las imágenes en versión móvil */
+@media (max-width: 576px) {
+  header .logos-right {
+    display: flex;
+    flex-direction: row; /* Alinear imágenes en fila */
+    justify-content: center; /* Centrar las imágenes */
+    gap: 10px; /* Espaciado entre las imágenes */
+  }
+
+  header .logos-right img {
+    max-width: 70px; /* Reducir el tamaño de las imágenes */
+    height: auto; /* Mantener proporciones */
+  }
+}
+
+/* Ajustes para las imágenes del footer en versión móvil */
+@media (max-width: 576px) {
+  
+footer {
+  background-color: #f1ebd5;
+  color: rgba(117, 115, 115, 0.877);
+  text-align: center;
+  position: relative; /* Cambiar a relative */
+  height: auto; /* Ajustar la altura automáticamente */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Añadir espaciado */
+
+    display: flex;
+    flex-direction: row; /* Alinear imágenes en una fila */
+    justify-content: center; /* Centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    gap: 10px; /* Espaciado entre imágenes */
+    padding: 10px; /* Reducir padding del footer */
+  }
+
+  footer img {
+    max-width: 50px; /* Reducir el tamaño máximo de las imágenes */
+    height: auto; /* Mantener proporciones */
+  }
+
+  footer p {
+    font-size: 12px; /* Reducir tamaño del texto */
+  }
+}
+
+/* Ajustar el footer para que no sea fijo */
+footer {
+  position: relative; /* Cambiar a relative para que se ubique después del contenido */
+  bottom: auto; /* Eliminar la posición fija */
+  margin-top: 20px; /* Agregar margen superior para separación */
+  height: auto; /* Ajustar altura automáticamente */
+}
+
+/* Agregar margen inferior al mapa */
+.mapa-container {
+  margin-bottom: 20px; /* Espacio suficiente para evitar superposición */
+}
+
+/* Barra azul de Universidad Autónoma de Sinaloa */
+.containersubtitulo {
+  width: 100%; /* Asegurar que ocupe todo el ancho */
+  background: linear-gradient(to right, #003595, #1d71b8); /* Fondo azul degradado */
+  color: white; /* Texto blanco */
+  text-align: center; /* Centrar texto horizontalmente */
+  padding: 10px 0; /* Espaciado interno */
+  font-size: 18px; /* Tamaño de fuente */
+  margin: 0; /* Sin márgenes adicionales */
+}
+
+/* Footer ajustes para alineación */
+footer {
+  background-color: #f1ebd5;
+  color: rgba(117, 115, 115, 0.877);
+  text-align: center;
+  position: relative; /* Para evitar superposiciones */
+  height: auto; /* Ajustar la altura automáticamente */
+  width: 100%; /* Ancho completo */
+  display: flex; /* Flexbox para organizar contenido */
+  flex-direction: row; /* Alinear contenido en una fila */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: space-around; /* Espaciar uniformemente los elementos */
+  padding: 10px; /* Espaciado interno */
+  margin-top: 20px; /* Espacio superior para separar del contenido anterior */
+}
+
+/* Ajustes para imágenes del footer */
+footer img {
+  max-width: 50px; /* Ajustar tamaño de las imágenes */
+  height: auto; /* Mantener proporciones */
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #00d9ff; }
+
+
+
+
